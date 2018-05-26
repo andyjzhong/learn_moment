@@ -22,6 +22,18 @@
   font-size: large;
 }
 
+.button {
+  background-color: #008CBA;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  color: white;
+  font-size: 16px;
+  font-variant-caps: small-caps;
+  height: 30px;
+  margin-top: 40px;
+  width: 80px;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

@@ -5,14 +5,19 @@ class MomentContainer extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { property: '' };
+    this.state = { time: '' };
+  }
+
+  onSecondChange() {
+    console.log(this.state)
+    // this.setState({time : 'waddup'});
   }
 
   render() {
     return (
       <div>
-        <span>Today is: </span>
-        <Moment format="dddd"></Moment>
+        <span>Seconds: </span>
+        <Moment format='s' onChange={() => this.onSecondChange()} />
       </div>
     );
   }
