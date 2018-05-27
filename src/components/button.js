@@ -1,10 +1,18 @@
 import React from 'react';
 
-const Button = (time) => {
-  return (
-    // <button onClick={() => {onUpdate(time)}}>Reload</button>
-    <button className="button" onClick={() => {console.log(this)}}>Reload</button>
-  )
+class Button extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {clicker: 'clicker'}
+  }
+
+  render(props) {
+    return(
+      <button className="button" onClick={() => {console.log(this.props)}}>Reload</button>
+    );
+  }
+
 }
 
 export default Button;
