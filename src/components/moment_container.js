@@ -8,19 +8,27 @@ class MomentContainer extends Component {
     this.state = { time: '' };
   }
 
-  onSecondChange() {
-    console.log(this.state)
-    // this.setState({time : 'waddup'});
+  componentDidMount() {
+    this.interval = setInterval(() => this.tick(), 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
   }
 
   render() {
     return (
       <div>
         <span>Seconds: </span>
-        <Moment format='s' onChange={() => this.onSecondChange()} />
+        <Moment format='s'/>
       </div>
     );
   }
+
+  tick() {
+    this.setState({time : 'time'});
+  }
+
 }
 
 export default MomentContainer
