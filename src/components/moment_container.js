@@ -19,8 +19,10 @@ class MomentContainer extends Component {
   render() {
     return (
       <div>
-        <span>Seconds: </span>
-        <Moment format='s'/>
+        <p>It is currently: </p>
+        <Moment onChange={(val) => { console.log(val)} } />
+        <br />
+        <Moment format='h:mm:ss a'/>
       </div>
     );
   }
